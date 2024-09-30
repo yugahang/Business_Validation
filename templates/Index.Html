@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Valid Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Business Valid Prediction</h1>
+    <div class="container">
+        <form action="/predict" method="post">
+            <label for="model_option">Select Model:</label>
+            <select id="model_option" name="model_option">
+                <option value="Decision Tree">Decision Tree</option>
+                <option value="Random Forest">Random Forest</option>
+                <option value="AdaBoost">AdaBoost</option>
+                <option value="XGBoost">XGBoost</option>
+            </select>
+
+            <label for="latitude">Latitude:</label>
+            <input type="number" id="latitude" name="latitude" step="any" placeholder="Enter latitude" required>
+
+            <label for="longitude">Longitude:</label>
+            <input type="number" id="longitude" name="longitude" step="any" placeholder="Enter longitude" required>
+
+            <label for="stars">Stars:</label>
+            <input type="number" id="stars" name="stars" step="any" placeholder="Enter star rating" required>
+
+            <label for="review_count_x">Review Count X:</label>
+            <input type="number" id="review_count_x" name="review_count_x" step="any" placeholder="Enter review count X" required>
+
+            <label for="avg_review_rating">Average Review Rating:</label>
+            <input type="number" id="avg_review_rating" name="avg_review_rating" step="any" placeholder="Enter average review rating" required>
+
+            <label for="review_count_y">Review Count Y:</label>
+            <input type="number" id="review_count_y" name="review_count_y" step="any" placeholder="Enter review count Y" required>
+
+            <label for="checkin_count">Check-in Count:</label>
+            <input type="number" id="checkin_count" name="checkin_count" step="any" placeholder="Enter check-in count" required>
+
+            <label for="tip_count">Tip Count:</label>
+            <input type="number" id="tip_count" name="tip_count" step="any" placeholder="Enter tip count" required>
+
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
